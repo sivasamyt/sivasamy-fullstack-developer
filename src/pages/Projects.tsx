@@ -56,16 +56,16 @@ const Projects = () => {
       live: "https://example.com",
       featured: false
     },
-    {
-      id: 6,
-      title: "IoT Monitoring System",
-      description: "Real-time IoT device monitoring with data visualization and alerts.",
-      tech: ["Node.js", "MQTT", "InfluxDB", "Grafana"],
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop",
-      github: "https://github.com",
-      live: "https://example.com",
-      featured: false
-    }
+    // {
+    //   id: 6,
+    //   title: "IoT Monitoring System",
+    //   description: "Real-time IoT device monitoring with data visualization and alerts.",
+    //   tech: ["Node.js", "MQTT", "InfluxDB", "Grafana"],
+    //   image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop",
+    //   github: "https://github.com",
+    //   live: "https://example.com",
+    //   featured: false
+    // }
   ];
 
   const containerVariants = {

@@ -19,11 +19,10 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <div className="relative min-h-screen">
-          <ParticleBackground />
+      <div className="relative min-h-screen">
+        <ParticleBackground />
+        <BrowserRouter>
           <Navigation />
-          
           <AnimatePresence mode="wait">
             <Routes>
               <Route path="/" element={<Hero />} />
@@ -36,8 +35,8 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
-        </div>
-      </BrowserRouter>
+        </BrowserRouter>
+      </div>
     </TooltipProvider>
   </QueryClientProvider>
 );

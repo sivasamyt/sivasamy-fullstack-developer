@@ -1,0 +1,25 @@
+{
+  "name": "light-theme-project",
+  "version": "1.0.0",
+  "description": "A project implementing a light theme for an application.",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/light-theme-project.git"
+  },
+  "keywords": [
+    "light",
+    "theme",
+    "typescript"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

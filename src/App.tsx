@@ -30,8 +30,8 @@ const App = () => (
               <Route path="/projects" element={<Projects />} />
               <Route path="/skills" element={<Skills />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/articles" element={<div className="min-h-screen pt-24 flex items-center justify-center"><h1 className="text-4xl text-cyber">Articles Coming Soon</h1></div>} />
-              <Route path="/profiles" element={<div className="min-h-screen pt-24 flex items-center justify-center"><h1 className="text-4xl text-cyber">Profiles Coming Soon</h1></div>} />
+              {/* <Route path="/articles" element={<div className="min-h-screen pt-24 flex items-center justify-center"><h1 className="text-4xl text-cyber">Articles Coming Soon</h1></div>} />
+              <Route path="/profiles" element={<div className="min-h-screen pt-24 flex items-center justify-center"><h1 className="text-4xl text-cyber">Profiles Coming Soon</h1></div>} /> */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>

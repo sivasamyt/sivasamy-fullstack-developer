@@ -11,9 +11,8 @@ const Skills = () => {
       icon: Code,
       color: "text-[hsl(var(--cyber-blue))]",
       skills: [
-        { name: "React / Next.js", level: 95 },
+        { name: "React.js", level: 95 },
         { name: "TypeScript", level: 90 },
-        { name: "Three.js / WebGL", level: 85 },
         { name: "Framer Motion", level: 88 }
       ]
     },
@@ -22,10 +21,10 @@ const Skills = () => {
       icon: Database,
       color: "text-[hsl(var(--cyber-purple))]",
       skills: [
-        { name: "Node.js / Express", level: 90 },
-        { name: "Python / Django", level: 85 },
-        { name: "PostgreSQL / MongoDB", level: 88 },
-        { name: "GraphQL / REST APIs", level: 92 }
+        { name: "Java / Spring Boot", level: 85 },
+        { name: "PHP / Laravel", level: 90 },
+        { name: "MySQL", level: 88 },
+        { name: "REST APIs", level: 92 }
       ]
     },
     {
@@ -34,44 +33,43 @@ const Skills = () => {
       color: "text-[hsl(var(--cyber-pink))]",
       skills: [
         { name: "UI/UX Design", level: 80 },
-        { name: "Figma / Adobe XD", level: 85 },
-        { name: "Animation & Motion", level: 90 },
-        { name: "Design Systems", level: 88 }
+        { name: "Figma", level: 85 },
+        { name: "Animation & Motion", level: 90 }
       ]
     },
-    {
-      title: "AI & Machine Learning",
-      icon: Brain,
-      color: "text-[hsl(var(--cyber-green))]",
-      skills: [
-        { name: "TensorFlow / PyTorch", level: 75 },
-        { name: "Computer Vision", level: 70 },
-        { name: "NLP & LLMs", level: 80 },
-        { name: "Data Science", level: 78 }
-      ]
-    },
+    // {
+    //   title: "AI & Machine Learning",
+    //   icon: Brain,
+    //   color: "text-[hsl(var(--cyber-green))]",
+    //   skills: [
+    //     { name: "TensorFlow / PyTorch", level: 75 },
+    //     { name: "Computer Vision", level: 70 },
+    //     { name: "NLP & LLMs", level: 80 },
+    //     { name: "Data Science", level: 78 }
+    //   ]
+    // },
     {
       title: "DevOps & Cloud",
       icon: Globe,
       color: "text-[hsl(var(--cyber-blue))]",
       skills: [
         { name: "AWS / Azure", level: 85 },
-        { name: "Docker / Kubernetes", level: 80 },
+        { name: "Docker", level: 80 },
         { name: "CI/CD Pipelines", level: 88 },
-        { name: "Monitoring & Logging", level: 82 }
+        // { name: "Monitoring & Logging", level: 82 }
       ]
     },
-    {
-      title: "Security & Blockchain",
-      icon: Shield,
-      color: "text-[hsl(var(--cyber-purple))]",
-      skills: [
-        { name: "Web Security", level: 85 },
-        { name: "Solidity / Smart Contracts", level: 75 },
-        { name: "Cryptography", level: 70 },
-        { name: "Security Audits", level: 80 }
-      ]
-    }
+    // {
+    //   title: "Security & Blockchain",
+    //   icon: Shield,
+    //   color: "text-[hsl(var(--cyber-purple))]",
+    //   skills: [
+    //     { name: "Web Security", level: 85 },
+    //     { name: "Solidity / Smart Contracts", level: 75 },
+    //     { name: "Cryptography", level: 70 },
+    //     { name: "Security Audits", level: 80 }
+    //   ]
+    // }
   ];
 
   const containerVariants = {
@@ -184,7 +182,7 @@ const Skills = () => {
         </motion.div>
 
         {/* Technical Certifications Section */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
@@ -217,7 +215,7 @@ const Skills = () => {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </PageTransition>
   );

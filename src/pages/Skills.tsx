@@ -11,6 +11,8 @@ const Skills = () => {
       icon: Code,
       color: "text-[hsl(var(--cyber-blue))]",
       skills: [
+        { name: "HTML", level: 95 },
+        { name: "CSS", level: 95 },
         { name: "React.js", level: 95 },
         { name: "TypeScript", level: 90 },
         { name: "Framer Motion", level: 88 }
@@ -22,8 +24,9 @@ const Skills = () => {
       color: "text-[hsl(var(--cyber-purple))]",
       skills: [
         { name: "Java / Spring Boot", level: 85 },
-        { name: "PHP / Laravel", level: 90 },
-        { name: "MySQL", level: 88 },
+        { name: "PHP / Laravel", level: 95 },
+        { name: "FastAPI", level: 85 },
+        { name: "MySQL", level: 95 },
         { name: "REST APIs", level: 92 }
       ]
     },
@@ -54,7 +57,7 @@ const Skills = () => {
       color: "text-[hsl(var(--cyber-blue))]",
       skills: [
         { name: "AWS / Azure", level: 85 },
-        { name: "Docker", level: 80 },
+        { name: "Docker", level: 90 },
         { name: "CI/CD Pipelines", level: 88 },
         // { name: "Monitoring & Logging", level: 82 }
       ]

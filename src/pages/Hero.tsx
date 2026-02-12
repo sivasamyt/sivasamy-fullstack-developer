@@ -94,9 +94,13 @@ const Hero = () => {
               <p className="text-muted-foreground leading-relaxed">
                 🚀 <strong className="text-foreground">Full-Stack Developer</strong> with 3+ years of experience building scalable web applications
               </p>
+
+              <p className="text-muted-foreground leading-relaxed">
+                💼 <strong className="text-foreground">Freelance Experience:</strong> 1.5+ years delivering custom solutions for international clients, managing projects end-to-end from design to deployment
+              </p>
               
               <p className="text-muted-foreground leading-relaxed">
-                🎯 <strong className="text-foreground">Specializations:</strong> React, Laravel, Spring boot, Word presss, TypeScript and modern web technologies
+                🎯 <strong className="text-foreground">Specializations:</strong> React, Laravel, Spring boot, FastAPI, Word presss, TypeScript, Mysql and modern web technologies
               </p>
               
               <p className="text-muted-foreground leading-relaxed">
@@ -115,7 +119,7 @@ const Hero = () => {
               className="mt-6 pt-6 border-t border-white/10"
             >
               <div className="flex flex-wrap gap-2">
-                {['React', 'Laravel', 'Spring Boot', 'Word Press', 'TypeScript'].map((skill, index) => (
+                {['React', 'Laravel', 'Spring Boot', 'FastAPI', 'PHP', 'Word Press', 'TypeScript', 'MySQL'].map((skill, index) => (
                   <motion.span
                     key={skill}
                     initial={{ opacity: 0, scale: 0.8 }}

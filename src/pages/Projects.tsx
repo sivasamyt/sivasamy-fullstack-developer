@@ -8,65 +8,72 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "AI-Powered Analytics Dashboard",
-      description: "Real-time data visualization platform with machine learning insights and predictive analytics.",
-      tech: ["React", "TypeScript", "Python", "TensorFlow"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-      github: "https://github.com",
-      live: "https://example.com",
+      title: "Mework – Enterprise Workflow System",
+      description:
+        "Full-stack web application where I handled both frontend and backend. Built reusable Vue components, integrated APIs with Spring Boot services, and ensured clean architecture and high code quality.",
+      tech: ["Vue.js", "Spring Boot", "TypeScript", "REST APIs"],
+      image: "/images/meWork.jpg", 
+      github: "",
+      live: "https://global.mework.work",
       featured: true
     },
     {
       id: 2,
-      title: "3D Portfolio Website",
-      description: "Interactive portfolio showcasing Three.js animations and WebGL effects.",
-      tech: ["Three.js", "React", "Framer Motion", "WebGL"],
-      image: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&h=600&fit=crop",
-      github: "https://github.com",
-      live: "https://example.com",
+      title: "Partz World – WooCommerce eCommerce Platform",
+      description:
+        "Customized WordPress & WooCommerce platform with plugin development, dynamic pricing, payment gateway integrations, and fully responsive theme customization.",
+      tech: ["WordPress", "PHP", "WooCommerce", "MySQL"],
+      image: "/images/mobpardz.png",
+      github: "",
+      live: "https://pardzworld.com/",
       featured: true
     },
     {
       id: 3,
-      title: "E-commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration and admin dashboard.",
-      tech: ["Next.js", "Node.js", "PostgreSQL", "Stripe"],
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
-      github: "https://github.com",
-      live: "https://example.com",
+      title: "Parking Hero – Smart Parking Management",
+      description:
+        "React + Spring Boot based real-time parking management system with reusable components, Redux state management, and seamless API communication.",
+      tech: ["React", "Redux", "Spring Boot", "REST APIs"],
+      image: "/images/parkingHero.jpg",
+      github: "",
+      live: "https://parkinghero.net/",
       featured: false
     },
     {
       id: 4,
-      title: "Mobile Task Manager",
-      description: "Cross-platform mobile app for project management with real-time collaboration.",
-      tech: ["React Native", "Firebase", "TypeScript"],
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
-      github: "https://github.com",
-      live: "https://example.com",
+      title: "Dynafios – Role Based Business Platform",
+      description:
+        "Laravel backend system with Spatie role & permission management. Developed APIs, database migrations, and optimized MySQL queries for performance.",
+      tech: ["Laravel", "MySQL", "Spatie", "REST APIs"],
+      image: "/images/dynafios.jpg",
+      github: "",
+      live: "https://dynafios.com/",
       featured: false
     },
     {
       id: 5,
-      title: "Blockchain Voting System",
-      description: "Secure voting platform built on Ethereum with smart contracts.",
-      tech: ["Solidity", "Web3.js", "React", "Ethereum"],
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop",
-      github: "https://github.com",
-      live: "https://example.com",
+      title: "Crypto Payment Gateway",
+      description:
+        "Microservices-based crypto payment system. Built secure APIs, handled background jobs, and managed database migrations for scalable architecture.",
+      tech: ["Laravel", "Microservices", "Queues", "MySQL"],
+      image: "/images/crypto_payment.jpg",
+      github: "",
+      live: "",
       featured: false
     },
-    // {
-    //   id: 6,
-    //   title: "IoT Monitoring System",
-    //   description: "Real-time IoT device monitoring with data visualization and alerts.",
-    //   tech: ["Node.js", "MQTT", "InfluxDB", "Grafana"],
-    //   image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop",
-    //   github: "https://github.com",
-    //   live: "https://example.com",
-    //   featured: false
-    // }
+    {
+      id: 6,
+      title: "Simpliaxis – Training & Certification Platform",
+      description:
+        "Laravel + React platform with REST APIs, Redis caching, queue management, and WhatsApp notifications using Interakt for real-time communication.",
+      tech: ["Laravel", "React", "Redis", "WhatsApp API"],
+      image: "/images/simpliaxis.png",
+      github: "",
+      live: "https://www.simpliaxis.com/",
+      featured: true
+    }
   ];
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -160,28 +167,32 @@ const Projects = () => {
                   </div>
                   
                   <div className="flex gap-3 pt-4">
-                    <Button 
-                      size="sm" 
-                      variant="outline" 
-                      className="flex-1 glass border-glow hover:bg-primary/10"
-                      asChild
-                    >
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-4 h-4 mr-2" />
-                        Code
-                      </a>
-                    </Button>
+                    {project.github && (
+                      <Button 
+                        size="sm" 
+                        variant="outline" 
+                        className="flex-1 glass border-glow hover:bg-primary/10"
+                        asChild
+                      >
+                        <a href={project.github} target="_blank" rel="noopener noreferrer">
+                          <Github className="w-4 h-4 mr-2" />
+                          Code
+                        </a>
+                      </Button>
+                    )}
                     
-                    <Button 
-                      size="sm" 
-                      className="flex-1 bg-gradient-primary hover:shadow-glow"
-                      asChild
-                    >
-                      <a href={project.live} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Live Demo
-                      </a>
-                    </Button>
+                    {project.live && (
+                      <Button 
+                        size="sm" 
+                        className="flex-1 bg-gradient-primary hover:shadow-glow"
+                        asChild
+                      >
+                        <a href={project.live} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Live Demo
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </CardContent>
               </Card>

@@ -53,8 +53,9 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Location",
-      value: "Chennai, India",
-      href: "#"
+      value: "Chennai, Tamil Nadu, India",
+      href: "https://maps.app.goo.gl/1iX4rxSZ9HGkw2Gc9",
+      external: true
     }
   ];
 
@@ -177,14 +178,12 @@ const Contact = () => {
             </Card>
           </motion.div>
 
-          {/* Contact Info & CTA */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="space-y-8"
           >
-            {/* Contact Information */}
             <Card className="glass border-glow">
               <CardHeader>
                 <CardTitle className="text-2xl text-cyber">Get In Touch</CardTitle>
@@ -194,6 +193,8 @@ const Contact = () => {
                   <motion.a
                     key={info.label}
                     href={info.href}
+                    target={info.external ? "_blank" : "_self"}
+                    rel={info.external ? "noopener noreferrer" : undefined}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
@@ -212,7 +213,6 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            {/* Resume Download */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -221,31 +221,51 @@ const Contact = () => {
               <Card className="glass border-glow">
                 <CardContent className="p-6">
                   <div className="text-center space-y-4">
-                    <h3 className="text-xl font-bold text-cyber">Download Resume</h3>
+                    <h3 className="text-xl font-bold text-cyber">Resume</h3>
                     <p className="text-muted-foreground">
                       Get a detailed overview of my experience, skills, and achievements.
                     </p>
-                    <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Button 
-                        size="lg"
-                        className="bg-gradient-secondary hover:shadow-glow transition-all duration-300"
-                        asChild
-                      >
-                        <a href="/resume.pdf" download>
-                          <Download className="w-4 h-4 mr-2" />
-                          Download Resume
-                        </a>
-                      </Button>
-                    </motion.div>
+                    <div className="flex gap-4 justify-center flex-wrap">
+                      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <Button
+                          size="lg"
+                          variant="outline"
+                          className="border-primary text-primary hover:bg-primary/10"
+                          asChild
+                        >
+                          <a
+                            href="/Sivasamy_fullstack.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Download className="w-4 h-4 mr-2" />
+                            View Resume
+                          </a>
+                        </Button>
+                      </motion.div>
+
+                      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <Button
+                          size="lg"
+                          className="bg-gradient-secondary hover:shadow-glow"
+                          asChild
+                        >
+                          <a
+                            href="/Sivasamy_fullstack.pdf"
+                            download="Sivasamy-Thiyagarajan-Resume.pdf"
+                          >
+                            <Download className="w-4 h-4 mr-2" />
+                            Download Resume
+                          </a>
+                        </Button>
+                      </motion.div>
+                    </div>
                   </div>
+
                 </CardContent>
               </Card>
             </motion.div>
 
-            {/* Quick Hire CTA */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

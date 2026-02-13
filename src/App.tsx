@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import ParticleBackground from "@/components/ParticleBackground";
+import Index from "@/pages/Index";
 import Hero from "@/pages/Hero";
 import Projects from "@/pages/Projects";
 import Skills from "@/pages/Skills";
@@ -25,13 +26,11 @@ const App = () => (
           <Navigation />
           <AnimatePresence mode="wait">
             <Routes>
-              <Route path="/" element={<Hero />} />
+              <Route path="/" element={<Index />} />
               <Route path="/about" element={<Hero />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/skills" element={<Skills />} />
               <Route path="/contact" element={<Contact />} />
-              {/* <Route path="/articles" element={<div className="min-h-screen pt-24 flex items-center justify-center"><h1 className="text-4xl text-cyber">Articles Coming Soon</h1></div>} />
-              <Route path="/profiles" element={<div className="min-h-screen pt-24 flex items-center justify-center"><h1 className="text-4xl text-cyber">Profiles Coming Soon</h1></div>} /> */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>

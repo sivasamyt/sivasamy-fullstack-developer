@@ -1,137 +1,142 @@
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import ThreeScene from '@/components/ThreeScene';
-import PageTransition from '@/components/PageTransition';
-import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import ThreeScene from "@/components/ThreeScene";
+import PageTransition from "@/components/PageTransition";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
     <PageTransition className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated gradient blur background */}
+
       <div className="absolute inset-0 gradient-blur" />
-      
-      {/* Three.js Scene */}
       <ThreeScene className="absolute inset-0 opacity-30" />
-      
+
       <div className="container mx-auto px-6 py-32 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Hero Content */}
+        <div className="grid lg:grid-cols-2 gap-14 items-center">
+
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -60 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="text-center lg:text-left"
+            transition={{ duration: 0.9 }}
+            className="text-center lg:text-left space-y-6"
           >
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-5xl lg:text-7xl font-bold mb-6 text-shadow-glow"
-            >
-              <span className="text-cyber">Creative</span>
+            <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+              Hi, I'm{" "}
+              <span className="text-cyber">Sivasamy</span>
               <br />
-              Developer
-            </motion.h1>
-            
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-              className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed"
-            >
-              Crafting digital experiences with cutting-edge technologies and creative innovation
-            </motion.p>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.9 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-            >
-              <Link to="/contact">
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-primary hover:shadow-glow transition-all duration-300 hover:scale-105"
-                >
-                  Hire Me
-                </Button>
-              </Link>
-              
+              <span className="text-muted-foreground text-3xl lg:text-4xl font-medium">
+                Full-Stack Developer
+              </span>
+            </h1>
+
+            <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-xl">
+              I design and build scalable web applications using{" "}
+              <span className="text-foreground font-semibold">Laravel</span>,{" "}
+              <span className="text-foreground font-semibold">React</span>,{" "}
+              <span className="text-foreground font-semibold">Fast API</span> and{" "}
+              <span className="text-foreground font-semibold">Spring Boot</span>.
+              Passionate about clean architecture, performance optimization and
+              solving real business problems with code.
+            </p>
+
+            <div className="flex flex-wrap gap-8 pt-4 justify-center lg:justify-start">
+              <div>
+                <h3 className="text-3xl font-bold text-cyber">5+</h3>
+                <p className="text-sm text-muted-foreground">Years Experience</p>
+              </div>
+              <div>
+                <h3 className="text-3xl font-bold text-cyber">10+</h3>
+                <p className="text-sm text-muted-foreground">Projects Delivered</p>
+              </div>
+              <div>
+                <h3 className="text-3xl font-bold text-cyber">4</h3>
+                <p className="text-sm text-muted-foreground">Companies Worked</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-6 justify-center lg:justify-start">
               <Link to="/projects">
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="glass border-glow hover:bg-primary/10 transition-all duration-300 hover:scale-105"
+                <Button
+                  size="lg"
+                  className="bg-gradient-primary hover:shadow-glow transition-all hover:scale-105"
                 >
-                  View Projects
+                  View My Work
                 </Button>
               </Link>
-            </motion.div>
+
+              <Link to="/contact">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="glass border-glow hover:bg-primary/10 transition-all hover:scale-105"
+                >
+                  Contact Me
+                </Button>
+              </Link>
+            </div>
           </motion.div>
-          
-          {/* About Me Section */}
+
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="glass p-8 rounded-2xl hover-lift"
+            transition={{ duration: 1 }}
+            className="glass p-10 rounded-3xl hover-lift backdrop-blur-xl"
           >
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="text-3xl font-bold mb-6 text-cyber"
-            >
+            <h2 className="text-3xl font-bold mb-6 text-cyber">
               About Me
-            </motion.h2>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1 }}
-              className="space-y-4"
-            >
-              <p className="text-muted-foreground leading-relaxed">
-                🚀 <strong className="text-foreground">Full-Stack Developer</strong> with 3+ years of experience building scalable web applications
+            </h2>
+
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+
+              <p>
+                🚀 Experienced Full-Stack Developer building enterprise-grade
+                applications with microservices, REST APIs and modern UI systems.
               </p>
 
-              <p className="text-muted-foreground leading-relaxed">
-                💼 <strong className="text-foreground">Freelance Experience:</strong> 1.5+ years delivering custom solutions for international clients, managing projects end-to-end from design to deployment
+              <p>
+                ⚙️ Worked on Laravel microservices, Redis caching, queues,
+                payment gateways, and real-time notification systems.
               </p>
-              
-              <p className="text-muted-foreground leading-relaxed">
-                🎯 <strong className="text-foreground">Specializations:</strong> React, Laravel, Spring boot, FastAPI, Word presss, TypeScript, Mysql and modern web technologies
+
+              <p>
+                💼 Delivered solutions for startups and international clients
+                including eCommerce, Workflow Systems, Crypto Payments,
+                and Parking Management platforms.
               </p>
-              
-              <p className="text-muted-foreground leading-relaxed">
-                🏆 <strong className="text-foreground">Achievements:</strong> Led 10+ successful projects, mentored junior developers, contributed to open-source
+
+              <p>
+                🎯 Focused on writing clean, maintainable, and scalable code that
+                improves performance and user experience.
               </p>
-              
-              <p className="text-muted-foreground leading-relaxed">
-                💡 <strong className="text-foreground">Passion:</strong> Creating immersive digital experiences that blend creativity with cutting-edge technology
-              </p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.2 }}
-              className="mt-6 pt-6 border-t border-white/10"
-            >
+            </div>
+
+            <div className="mt-8 pt-6 border-t border-white/10">
               <div className="flex flex-wrap gap-2">
-                {['React', 'Laravel', 'Spring Boot', 'FastAPI', 'PHP', 'Word Press', 'TypeScript', 'MySQL'].map((skill, index) => (
+                {[
+                  "React",
+                  "Vue",
+                  "Laravel",
+                  "Spring Boot",
+                  "Fast API",
+                  "TypeScript",
+                  "Node.js",
+                  "MySQL",
+                  "Docker",
+                  "AWS",
+                  "Redis",
+                ].map((skill, i) => (
                   <motion.span
                     key={skill}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.4, delay: 1.3 + index * 0.1 }}
-                    className="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full border border-primary/30"
+                    transition={{ delay: i * 0.05 }}
+                    className="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full border border-primary/30"
                   >
                     {skill}
                   </motion.span>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>

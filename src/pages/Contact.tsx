@@ -8,7 +8,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import PageTransition from '@/components/PageTransition';
-import { Mail, Phone, MapPin, Send, Download } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Download, Eye } from 'lucide-react';
+import emailjs from "@emailjs/browser";
 
 interface ContactForm {
   name: string;
@@ -24,16 +25,33 @@ const Contact = () => {
 
   const onSubmit = async (data: ContactForm) => {
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon!",
-    });
-    
-    reset();
+
+    try {
+      await emailjs.send(
+        "service_ws6739u",
+        "template_rttal3x",
+        {
+          name: data.name,
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+        },
+        "JY0dyUPvojAiDM4t5"
+      );
+      toast({
+        title: "Message Sent ✅",
+        description: "Thank you for contacting me. I'll get back to you soon!",
+      });
+
+      reset();
+    } catch (error) {
+      console.error(error);
+      toast({
+        title: "Failed ❌",
+        description: "Something went wrong. Please try again.",
+      });
+    }
+
     setIsSubmitting(false);
   };
 
@@ -230,7 +248,7 @@ const Contact = () => {
                         <Button
                           size="lg"
                           variant="outline"
-                          className="border-primary text-primary hover:bg-primary/10"
+                          className="bg-gradient-accent hover:shadow-glow transition-all duration-300"
                           asChild
                         >
                           <a
@@ -238,7 +256,7 @@ const Contact = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <Download className="w-4 h-4 mr-2" />
+                            <Eye className="w-4 h-4 mr-2" />
                             View Resume
                           </a>
                         </Button>
@@ -262,34 +280,6 @@ const Contact = () => {
                     </div>
                   </div>
 
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1 }}
-            >
-              <Card className="glass border-glow gradient-blur">
-                <CardContent className="p-6">
-                  <div className="text-center space-y-4">
-                    <h3 className="text-xl font-bold text-cyber">Ready to Start?</h3>
-                    <p className="text-muted-foreground">
-                      Let's schedule a call to discuss your project requirements.
-                    </p>
-                    <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Button 
-                        size="lg"
-                        className="bg-gradient-accent hover:shadow-glow transition-all duration-300"
-                      >
-                        Schedule a Call
-                      </Button>
-                    </motion.div>
-                  </div>
                 </CardContent>
               </Card>
             </motion.div>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center px-6">
+    <div className="min-h-screen flex items-center justify-center px-6 pt-24">
       <div className="max-w-5xl text-center space-y-10">
 
         <motion.div

@@ -69,6 +69,9 @@ const Index = () => {
           <Button asChild size="lg">
             <Link to="/projects">View Projects</Link>
           </Button>
+          <Button asChild size="lg">
+            <Link to="https://staging.simpliaxis.com">simpliaxis</Link>
+          </Button>
 
           <Button asChild variant="outline" size="lg">
             <Link to="/contact">Contact Me</Link>

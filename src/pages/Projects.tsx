@@ -3,6 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import PageTransition from '@/components/PageTransition';
 import { ExternalLink, Github } from 'lucide-react';
+import { Link } from "react-router-dom";
+
 
 const Projects = () => {
   const projects = [
@@ -52,6 +54,17 @@ const Projects = () => {
     },
     {
       id: 5,
+      title: "Softsuave - Company Website",
+      description:
+        "The site was built using PHP, and the services and blog pages were implemented using WordPress. I handled the backend development, database management, and implemented custom features to enhance the user experience.",
+      tech: ["WordPress", "PHP", "MySQL"],
+      image: "/images/softsuave.jpeg",
+      github: "",
+      live: "https://softsuave.com/",
+      featured: false
+    },
+    {
+      id: 6,
       title: "Crypto Payment Gateway",
       description:
         "Microservices-based crypto payment system. Built secure APIs, handled background jobs, and managed database migrations for scalable architecture.",
@@ -62,7 +75,7 @@ const Projects = () => {
       featured: false
     },
     {
-      id: 6,
+      id: 7,
       title: "Simpliaxis – Training & Certification Platform",
       description:
         "Laravel + React platform with REST APIs, Redis caching, queue management, and WhatsApp notifications using Interakt for real-time communication.",
@@ -187,10 +200,12 @@ const Projects = () => {
                         className="flex-1 bg-gradient-primary hover:shadow-glow"
                         asChild
                       >
-                        <a href={project.live} target="_blank" rel="noopener noreferrer">
+                        {/* <a href={project.live} target="_blank" rel="noopener noreferrer"> */}
+                        <Link to="/contact">
                           <ExternalLink className="w-4 h-4 mr-2" />
                           Live Demo
-                        </a>
+                        </Link>
+                        {/* </a> */}
                       </Button>
                     )}
                   </div>

@@ -21,7 +21,7 @@ const Index = () => {
           </h1>
 
           <h2 className="text-2xl md:text-3xl text-muted-foreground font-medium">
-            Full-Stack Developer | Laravel • React • Spring Boot • Fast API
+            Full-Stack Developer | Laravel • React • Spring Boot • Wordpress • Fast API
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -43,6 +43,7 @@ const Index = () => {
             "Vue",
             "Laravel",
             "Spring Boot",
+            "Wordpress",
             "Fast API",
             "Node",
             "MySQL",

@@ -117,6 +117,7 @@ const Hero = () => {
                   "Vue",
                   "Laravel",
                   "Spring Boot",
+                  "WordPress",
                   "Fast API",
                   "TypeScript",
                   "Node.js",

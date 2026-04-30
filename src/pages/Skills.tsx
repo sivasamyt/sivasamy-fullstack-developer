@@ -27,7 +27,7 @@ const Skills = () => {
         { name: "PHP / Laravel", level: 95 },
         { name: "FastAPI", level: 85 },
         { name: "MySQL", level: 95 },
-        { name: "REST APIs", level: 92 }
+        { name: "WordPress", level: 92 }
       ]
     },
     {

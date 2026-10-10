@@ -84,6 +84,17 @@ const Projects = () => {
       github: "",
       live: "https://www.simpliaxis.com/",
       featured: true
+    },
+    {
+      id: 8,
+      title: "Royal Crackers – Online Fireworks Store",
+      description:
+        "Laravel-based eCommerce website for a fireworks retailer with product catalog, order management, REST APIs, and optimized MySQL database design.",
+      tech: ["Laravel", "MySQL", "REST APIs"],
+      image: "/images/royalcrackers.jpeg",
+      github: "",
+      live: "https://royalcrackers.net/",
+      featured: true
     }
   ];
 
